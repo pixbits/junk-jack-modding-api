@@ -1,7 +1,22 @@
 ## Items
 
+- `item:add`
+- `item:set-graphics`
+- `item:set-name`
+
+## Weapons
+
+- `weapon:set-animation`
+
+## Equips
+
+- `equip:clear-properties`
+- `equip:set-properties`
+- `equip:update-properties`
+
 ## Blocks
 
+- `block:set-graphics`
 - `block:set-loot-table`
 
 ## Mobs
