@@ -4,7 +4,8 @@ This repository contains all the official info related to Junk Jack Modding API 
 
 ## Status
 
-Currently the API is just in early development state, it's a experimental feature that is getting developed in spare time as a side project.
+Currently the API is just in development state, it's a experimental feature that is getting developed in spare time as a side project.
 
-There's no guarantee it will ever see the light at the end of the tunnel but let's be hopeful ;)
+There is no documentation but feel free to check samples folder and make your tests! All mods should be placed inside `%appdata%/Junk Jack/mods` together with the accessory graphics files. 
 
+Beware: this is a Windows only feature at the moment and doing this with multiplayer games or old savegames could lead to strange and unpredictable results to **DO THIS AT YOUR OWN RISK**.

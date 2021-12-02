@@ -1,0 +1,36 @@
+{
+  "info":
+  {
+    "name": "modding tests",
+    "author": "Jack",
+    "version": "0.1"
+  },
+  "payload":
+  [
+
+    {
+      "type": "block:set-graphics",
+      "block": "Soft Brown Dirt",
+      "texture": "minecraft.png",
+      "gfx": [
+        [ 32, 0, 16, 16 ]
+      ]
+    },
+    {
+      "type": "block:set-graphics",
+      "block": "Building Wood",
+      "texture": "minecraft.png",
+      "gfx": [
+        [ 64, 16, 16, 16 ]
+      ]
+    },
+    {
+      "type": "block:set-graphics",
+      "block": "Wood Ladder",
+      "texture": "minecraft.png",
+      "gfx": [
+        [ 48, 80, 16, 16 ]
+      ]
+    }
+  ]
+}

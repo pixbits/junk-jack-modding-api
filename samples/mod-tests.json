@@ -1,0 +1,139 @@
+{
+	"info":
+	{
+		"name": "modding tests",
+		"author": "Jack",
+		"version": "0.1"
+	},
+  "payload": [
+    {
+      "type": "loot-table:add",
+      "table": {
+        "name": "rich wood table",
+        "items": [
+          {
+            "chance": 1.0,
+            "min": 50,
+            "max": 100,
+            "item": "Gold Ingot"
+          }
+        ],
+        "guaranteed": false
+      }
+    },
+    {
+      "type": "block:set-loot-table",
+      "block": "Building Wood",
+      "table": "rich wood table"
+    },
+    {
+      "type": "mob:set-loot-table",
+      "mob": "Sheep White",
+      "table": "rich wood table"
+    },
+    {
+      "type": "craft:add",
+      "craft": {
+        "output": "Gold Ingot",
+        "outputCount": 1,
+        "difficulty": "hard",
+        "type": "single",
+        "equivalence": false,
+        "recycle": false,
+        "data": [
+          "Iron Ingot"
+        ],
+        "addon": "anvil"
+      }
+    },
+    {
+      "type": "loot-group:add",
+      "lootGroup": {
+        "name": "Test Group",
+        "items": [
+          "Wood",
+          "Iron Ingot",
+          "Gold Ingot"
+        ]
+      }
+    },
+    {
+      "type": "loot-table:add-loots",
+      "table": "Building Iron",
+      "loots": [
+        {
+          "chance": 1.0,
+          "min": 10,
+          "max": 50,
+          "group": "Test Group"
+        }
+      ]
+    },
+    {
+      "type": "item:add",
+      "texture": "goblet.png",
+      "item": {
+        "name": "Junk Jack Retro Goblet",
+        "kind": "loot",
+        "variants": 1,
+        "sizes": [ 9, 13 ],
+        "value": 0,
+        "offsets": [ 0, -1 ],
+        "stackable": true,
+        "outline": 7,
+        "gfx": [
+          [ 0, 0, 9, 13 ]
+        ]
+      }
+    },
+    {
+      "type": "item:set-graphics",
+      "item": "Copper Sword",
+      "texture": "missing sword.png",
+      "offsets": [ 0, -1 ],
+      "gfx": [
+        [ 0, 0, 16, 16 ]
+      ]
+    },
+    {
+      "type": "item:add",
+      "texture": "minotear.png",
+      "item": {
+        "name": "Minotear Sword",
+        "kind": "weapon",
+        "variants": 1,
+        "sizes": [ 9, 13 ],
+        "value": 0,
+        "offsets": [ 0, -1 ],
+        "stackable": true,
+        "outline": 7,
+        "gfx": [
+          [ 18, 0, 16, 16 ]
+        ],
+        "uses": 1280,
+        "range": 5,
+        "power": 2.3,
+        "damageType": "slash",
+        "knockback": 3.0,
+        "critical": 0.08,
+        "leech": 0.0
+      }
+    },
+    {
+      "type": "weapon:set-animation",
+      "weapon": "Minotear Sword",
+      "texture": "minotear.png",
+      "animation": {
+        "type": "single",
+        "rect": [ 0, 0, 17, 55 ],
+        "hitBox": [ 0, 15, 5, 23 ],
+        "anchor": [ 8.5, 3.0 ],
+        "speed": 1.4,
+        "angle": -20.0,
+        "delta": [ 18.0, 0.0 ],
+        "rotation": 170.0,
+        "anim": "rotate_and_move"
+      }
+    }
+  ]
+}

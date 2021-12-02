@@ -1,0 +1,177 @@
+{
+	"info":
+	{
+		"name": "modding tests",
+		"author": "Jack",
+		"version": "0.1"
+	},
+	"payload":
+	[
+    {
+      "type": "loot-table:add",
+      "table":
+      {
+        "name": "rich wood table",
+        "items": [
+          {
+            "chance": 1.0,
+            "min": 50,
+            "max": 100,
+            "item": "Gold Ingot"
+          }
+        ],
+        "guaranteed": false
+      }
+    },
+    {
+      "type": "block:set-loot-table",
+      "block": "Building Wood",
+      "table": "rich wood table"
+    },
+    {
+      "type": "mob:set-loot-table",
+      "mob": "Sheep White",
+      "table": "rich wood table"
+    },
+    {
+      "type": "craft:add",
+      "craft": 
+      {
+          "output": "Gold Ingot",
+          "outputCount": 1,
+          "difficulty": "hard",
+          "type": "single",
+          "equivalence": false,
+          "recycle": false,
+          "data": [
+            "Iron Ingot"
+          ],
+          "addon": "anvil"
+      }
+    },
+    {
+      "type": "loot-group:add",
+      "lootGroup":
+      {
+        "name": "Test Group",
+        "items": [
+          "Wood",
+          "Iron Ingot",
+          "Gold Ingot"
+        ]
+      }
+    },
+    {
+      "type": "loot-table:add-loots",
+      "table": "Building Iron",
+      "loots":
+      [
+        {
+          "chance": 1.0,
+          "min": 10,
+          "max": 50,
+          "group": "Test Group"
+        }
+      ]
+    },
+    {
+      "type": "item:add",
+      "texture": "goblet.png",
+      "item":
+      {
+        "name": "Junk Jack Retro Goblet",
+        "id": 4096,
+        "kind": "loot",
+        "variants": 1,
+        "sizes": [ 9, 13],
+        "value": 0,
+        "offsets": [ 0, -1 ],
+        "stackable": true,
+        "outline": 7,
+        "gfx": [
+          [ 0, 0, 9, 13 ]
+        ]
+      }
+    },
+    {
+      "type": "equip:clear-properties",
+      "equip": "Iron Armor Legs"
+    },
+    {
+      "type": "equip:update-properties",
+      "equip": "Iron Armor Feet",
+      "properties":
+      {
+        "defenses": [50, 50, 50, 50]
+      }
+    },
+    {
+      "type": "item:set-name",
+      "disabled": true,
+      "item": "Iron Ingot",
+      "language": "en",
+      "string": "ぁぃぅぇぉ"
+    },
+    {
+      "type": "equip:set-graphics",
+      "equip": "Wood Armor Helm",
+      "gfx": [ [ 0, 0, 20, 22 ] ],
+      "texture": "dragon-set.png"
+    },
+    {
+      "type": "equip:set-graphics",
+      "equip": "Wood Armor Chest",
+      "gfx": [ 
+        [ 22, 17, 20, 16 ], 
+        [ 22, 0, 20, 16 ], 
+        [ 42, 0, 10, 10],
+        [ 42, 11, 10, 10], 
+        [ 42, 22, 6, 6], 
+        [ 42, 22, 6, 6]
+      ],
+      "texture": "dragon-set.png"
+    },
+    {
+      "type": "equip:set-graphics",
+      "equip": "Wood Armor Legs",
+      "gfx": [ [ 53, 0, 8, 8 ], [62, 0, 8, 8] ],
+      "texture": "dragon-set.png"
+    },
+    {
+      "type": "equip:set-graphics",
+      "equip": "Wood Armor Feet",
+      "gfx": [ [ 53, 9, 8, 8 ], [62, 9, 8, 8] ],
+      "texture": "dragon-set.png"
+    },
+    {
+      "type": "block:set-graphics",
+      "block": "Building Wood",
+      "texture": "minecraft.png",
+      "gfx": [
+        [64, 16, 16, 16]
+      ]
+    },
+    {
+      "type": "block:set-graphics",
+      "block": "Wood Ladder",
+      "texture": "minecraft.png",
+      "gfx": [
+        [48, 80, 16, 16]
+      ]
+    },
+    {
+      "type": "block:set-graphics",
+      "block": "Soft Brown Dirt",
+      "texture": "minecraft.png",
+      "gfx": [
+        [32, 0, 16, 16]
+      ]
+    },
+    {
+      "type": "block:set-flags",
+      "block": "Soft Brown Dirt",
+      "mode": "add",
+      "flags": [ "slippery" ]
+    }
+	]
+}
